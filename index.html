@@ -596,6 +596,80 @@
 <button id="bookBtn" class="floating-book-btn">
     <i class="fas fa-calendar-check"></i> Book Now
 </button>
+<!-- Booking Popup -->
+<div id="bookingPopup" class="booking-popup">
+
+    <div class="booking-content">
+
+        <span class="close-booking">&times;</span>
+
+        <h2>Book Our Cleaning Services</h2>
+
+        <form>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="07XXXXXXXX" required>
+
+            <label>Email Address</label>
+            <input type="email" placeholder="example@gmail.com" required>
+
+            <label>Select Service</label>
+
+            <select id="service" onchange="calculatePrice()">
+
+                <option value="">Choose Service</option>
+
+                <option value="3000">General Cleaning</option>
+
+                <option value="6000">Deep Cleaning</option>
+
+                <option value="4500">Fumigation</option>
+
+                <option value="5000">Pest Control</option>
+
+                <option value="7000">Office Cleaning</option>
+
+                <option value="8500">Move In / Move Out Cleaning</option>
+
+            </select>
+
+            <label>Select Date</label>
+            <input type="date" required>
+
+            <label>Location</label>
+            <input type="text" placeholder="Enter your location">
+
+            <label>Additional Notes</label>
+            <textarea rows="4"></textarea>
+
+            <div class="booking-summary">
+
+                <h3>Booking Summary</h3>
+
+                <p>
+                    <strong>Service:</strong>
+                    <span id="selectedService">None</span>
+                </p>
+
+                <p>
+                    <strong>Amount:</strong>
+                    KSh <span id="amount">0</span>
+                </p>
+
+            </div>
+
+            <button type="submit" class="book-submit">
+                Proceed to Payment
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
 
 
 </body>
