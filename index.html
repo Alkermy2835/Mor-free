@@ -826,7 +826,7 @@ background:#d4a400;
 
             </div>
 
-            <button type="submit" class="book-submit">
+            <button type="submit" class="book-submit"></button>
                 Proceed to Payment
             </button>
 
@@ -835,6 +835,54 @@ background:#d4a400;
     </div>
 
 </div>
+<script>
+
+const popup=document.getElementById("bookingPopup");
+
+document.getElementById("bookBtn").onclick=function(){
+
+popup.style.display="block";
+
+}
+
+document.querySelector(".close-booking").onclick=function(){
+
+popup.style.display="none";
+
+}
+
+window.onclick=function(event){
+
+if(event.target==popup){
+
+popup.style.display="none";
+
+}
+
+}
+
+function calculatePrice(){
+
+let service=document.getElementById("service");
+
+document.getElementById("selectedService").innerHTML=
+
+service.options[service.selectedIndex].text;
+
+document.getElementById("amount").innerHTML=
+
+Number(service.value).toLocaleString();
+
+}
+
+</script>
+
+
+
+
+
+
+
 
 
 </body>
